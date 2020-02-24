@@ -1,5 +1,10 @@
 #A compiler from the scratch:
 
+ Markup : * Bullet list
+              * Nested bullet
+                  * Sub-nested bullet etc
+          * Bullet list item 2
+
 Refer to this document for more information.
 
 https://www.overleaf.com/read/vmcjpfhqmkwr

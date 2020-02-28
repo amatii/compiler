@@ -12,6 +12,10 @@ Find the Smoke test in the parser_SSA-....ipnyb
 
 ## To do: 
 * make 'live' graph of the SSA variables
+	* reversed the edges of CFG. then started with bb without input edge.(kind of lexical ordering!)
+	* made the graph: how to eliminate dead code? I have to consider what program return, print, or write? 
+	* implement graph coloring, or implement my own? (ask Franz)
+	
 * deal with arrays
 * deal with functions/procedures: 
 	* function BB: ok, 
@@ -27,6 +31,7 @@ Find the Smoke test in the parser_SSA-....ipnyb
 	* Addi for now!
 * remove redundant computations: '< a<-x+y  b<-x+y >'
 	* refactorize the code
+	* I used two pass: one for finding the repeated op, and the second pass to replace the SSA_number: is it correct? or I have to follow the single pass emthod?
 
 ## test and others: 
 	

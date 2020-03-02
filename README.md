@@ -13,8 +13,10 @@ Find the Smoke test in the parser_SSA-....ipnyb
 ## To do: 
 * make 'live' graph of the SSA variables
 	* reversed the edges of CFG. then started with bb without input edge.(kind of lexical ordering!)
-	* made the graph: how to eliminate dead code? I have to consider what program return, print, or write? 
+	* made the graph: how to eliminate dead code? I have to consider what program return, print, or write? https://www.seas.harvard.edu/courses/cs153/2018fa/lectures/Lec23-SSA.pdf oage 37: 1. stores into mem, performs I/O, returns from function, calls function that may have side effects •2. defines variable that is used in a live statement •3. is a conditional branch that affects whether a live statement is executed (i.e., live statement is control dependent on the branch)
+
 	* implement graph coloring, or implement my own? (ask Franz)
+	* how to implement 'While'? http://ssabook.gforge.inria.fr/latest/book.pdf page 96: The firstpass, very similar to traditional data-flow analysis, computes partial liveness setsby traversing the forward-CFG backwards. The second pass refines the partialliveness sets and computes the final solution by propagating forward along theloop nesting forest. For the sake of clarity, we first present the algorithm forreducible CFGs. Irreducible CFGs?can be handled with a slight variation of thealgorithm, with no need to modify the CFG itself.
 	
 * deal with arrays
 * deal with functions/procedures: 
@@ -22,6 +24,7 @@ Find the Smoke test in the parser_SSA-....ipnyb
 		* call
 		* return value
 	* deal with reserved functions: write, read,...
+	* how deal with Phi?
 * deal with uninitilized variables
 	* it depends on how I use it for the later step(make 'live' graph of the SSA variables)
 
